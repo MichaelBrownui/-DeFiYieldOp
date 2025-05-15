@@ -1,7 +1,9 @@
 const axios = require('axios');
+const APIManager = require('./api');
 
 class ProtocolDataFetcher {
     constructor() {
+        this.api = new APIManager();
         this.apiEndpoints = {
             compound: 'https://api.compound.finance/api/v2/ctoken',
             aave: 'https://aave-api-v2.aave.com/data/rates-history',
